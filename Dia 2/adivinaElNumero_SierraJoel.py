@@ -4,7 +4,7 @@ print("Bienvenido a: \n !ADIVINA EL NUMERO¡ \nEl juego consta de:\n1.Habra un n
 
 numPrograma = int
 numUsuario = int
-
+intentos = int
 
 numPrograma = random.randint(1,100)
 
@@ -13,7 +13,7 @@ for i in range(1,11,1):
         for j in range(1,11,1):
             print("Intento: ", j)
             numUsuario = int(input("Intenta adivinar el numero "))
-
+            intentos = 0+j
             if i == 10:
                 print("No tienes mas intentos 🙁\nVuelve a intentarlo")
             else:
@@ -22,7 +22,7 @@ for i in range(1,11,1):
                 elif numUsuario < numPrograma:
                     print("Pista: \nEl numero que debes adivinar es mayor del que ingresaste 🤫")
             if numUsuario == numPrograma:
-                print("¡ADIVINASTE EL NUMERO!\nEres el GANADOR🏆")
+                print("¡ADIVINASTE EL NUMERO!\nLo lograste en: ", intentos ," intentos", "\nEres el GANADOR🏆")
                 break
     
         
