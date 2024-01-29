@@ -24,6 +24,8 @@ for i in range(1,11,1):
             if numUsuario == numPrograma:
                 print("¡ADIVINASTE EL NUMERO!\nLo lograste en: ", intentos ," intentos", "\nEres el GANADOR🏆")
                 break
+
+## Desarrollado por Joel Santiago Sierra Leon - 1097492869
     
         
 
