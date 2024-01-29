@@ -21,3 +21,5 @@ if cond == 0 or 1:
         print ("Has decidido acabar con la secuencia")
 else:
     print("Favor solo digite 0 o 1")
+
+## Desarrollado por Joel Santiago Sierra Leon - 1097492869
