@@ -3,7 +3,7 @@ def pares(T_n,n,k):
     for i in range(n):
         for j in range(i+1,n):
             if (T_n[i]+T_n[j] % k == 0):
-                pairs.add((min(T_n[i],T_n[j]),max(T_n[i],T_n[j])))
+                pairs.add((min(T_n[i],T_n[j]), max(T_n[i],T_n[j])))
             return len(pairs)
         
 T = int(input())
@@ -13,8 +13,6 @@ for case in range(T):
     n = 0
     k = 0
     T_n = list()
-    for i in range(2):
-        q=texto.split()
     textoLista = texto.split(' ')
     numerosLista = numeros.split(' ')
     #print(textoLista)
@@ -23,6 +21,6 @@ for case in range(T):
     #print(numerosLista)
     for p in range(n):
         numerito = int(numerosLista[p])
-        T_n.append(numerito)
+        T_n.append(abs(numerito))
     result = pares (T_n,n,k)
     print("Case {}:{}".format(case+1,result))
