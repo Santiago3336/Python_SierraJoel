@@ -3,24 +3,24 @@
 #Y la cantidad, al finalizar mostrar en la consola el precio total, si
 #El producto no esta debe mostrar un mensaje informando sobre ello
 
-diccionario = {'Productos':("Arroz", "Papa", "Yuca", "Aguacate", "Tomate", "Cebolla", "Lechuga", "Ajo", "Pimenton"), 
-               'Precios':(4600, 3600, 4200, 5500, 3400, 3200, 3500, 1200, 3700)}
-print("Bienvenido\n A continuacion se te mostrara el inventario de productos\nJunto con su valor en libras")
-print(diccionario)
+verduleria = {"Inventario": ("Tomates", "Cebollas", "Pepinos"),
+               "Precios": (2500, 3500, 3000)}
+print("Inventario actual: ")
+print(verduleria)
 
-producto, cantidad = map(input("Favor ingrese el producto que desea junto con la cantidad")).split()
+produc = str (input("Ingrese lo que desea comprar de la lista anterior: "))
 
-producto = str
-cantidad = int
-cond = True
+cantidad = int (input("Ingrese la cantidad que desea de este producto: "))
 
+produc = produc.capitalize()
 
+precioTotal = int
 
-while cond == True:
-    for i in range(0,1,1):
+if produc in verduleria["Inventario"] :
 
-
-        
-
-
-
+    buscarProducto = verduleria["Inventario"].index(produc)
+    precioTotal = verduleria["Precios"][buscarProducto]
+    precioTotal = precioTotal * cantidad
+    print(f"El precio total es de $",precioTotal,)
+else:
+    print("El producto esta agotado actualmente.")
