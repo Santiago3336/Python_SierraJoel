@@ -67,10 +67,7 @@ else:
 
 # Sin Parametro Sin Retorno
 
-def saludo():
-    print("HOLA")
 
-saludo()
 
 # Sin Parametro Con Retorno
 
