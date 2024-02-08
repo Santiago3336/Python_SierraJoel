@@ -112,7 +112,7 @@ with open('Ejercicio6.json', 'w') as outfile:
     json.dump({"MayorComision": MayorComision}, outfile, indent=2)
 
 # 7. Clientes de Sevilla ordenados alfabéticamente
-with open('data.json', 'r') as data:
+with open("data.json",'r') as data:
     ejercicio = json.load(file)
 clientesSevilla = sorted([{'id': cliente['id'], 'nombre': cliente['nombre'], 'apellido1': cliente['apellido1']} for cliente in
      data['ventas']['clientes'] if cliente['ciudad'] == 'Sevilla'],
