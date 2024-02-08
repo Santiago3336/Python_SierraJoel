@@ -52,12 +52,12 @@ with open('Ejercicio2.json', 'w') as outfile:
 with open('data.json', 'r') as file:
     ejercicio = json.load(file)
     
-ClientesConPedidos = set() #<- almacenarlos en un conjunto para que no sw repitan
+ClientesConPedidos = set() 
 for pedido in ejercicio["ventas"]["pedidos"]:
-    ClientesConPedidos.add(pedido["id_cliente"]) # <- se a単aden los pedidos
+    ClientesConPedidos.add(pedido["id_cliente"]) 
 # print(clientes_con_pedidos)
 
-ClientesConPedidos = list(ClientesConPedidos) # <- el conjunto lo pasamos a lista
+ClientesConPedidos = list(ClientesConPedidos) 
 
 with open('Ejercicio3.json', 'w') as outfile:
     json.dump(ClientesConPedidos, outfile, indent=2)
@@ -70,7 +70,7 @@ Pedidos2017Mas500 = []
 
 for pedido in ejercicio["ventas"]["pedidos"]:
     
-    año_pedido = int(pedido["fecha"].split("-")[0]) #dividir el valor de fecha de acuerdo a los - y solo agarrar el primero (A単o)
+    año_pedido = int(pedido["fecha"].split("-")[0]) 
     
     if año_pedido == 2017 and pedido["total"] > 500:
         Pedidos2017Mas500.append(pedido)
@@ -112,6 +112,8 @@ with open('Ejercicio6.json', 'w') as outfile:
     json.dump({"MayorComision": MayorComision}, outfile, indent=2)
 
 # 7. Clientes de Sevilla ordenados alfabéticamente
+with open('data.json', 'r') as data:
+    ejercicio = json.load(file)
 clientesSevilla = sorted([{'id': cliente['id'], 'nombre': cliente['nombre'], 'apellido1': cliente['apellido1']} for cliente in
      data['ventas']['clientes'] if cliente['ciudad'] == 'Sevilla'],
     key=itemgetter('apellido1', 'nombre'))
