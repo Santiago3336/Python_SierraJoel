@@ -1,5 +1,5 @@
 import json
-import itemgetter
+from operator import itemgetter
 
 # #Separe por partes el archivo json para poder manipularlo
 # ejercicio1 = open("data.json")
