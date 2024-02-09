@@ -16,6 +16,10 @@ from operator import itemgetter
 # print(pedidos)
 # print(type(ejercicio))
 
+with open('data.json') as f:
+    data = json.load(f)
+from operator import itemgetter
+
 #Ejercicio 1
 with open("data.json",'r') as ArchivoJson:
     ejercicio = json.load(ArchivoJson)
@@ -26,7 +30,7 @@ pedidos = ejercicio["ventas"]["pedidos"]
 
 PedidosOrdenados = sorted(pedidos, key=ObtenerFecha, reverse=True)
 
-#print(pedidos_ordenados)
+#print(pedidosOrdenados)
 
 with open('Ejercicio1.json', 'w') as outfile:
     json.dump(PedidosOrdenados, outfile, indent=2)
